@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Imóvel</title>
+    <!-- Adicionando o Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .property-form-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container property-form-container">
+        <h2 class="text-center">Formulário de Imóvel</h2>
+
+        <form action="/submit" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="tipoImovel">Tipo de Imóvel:</label>
+                        <select class="form-control" id="tipoImovel" name="tipoImovel" required>
+                            <option value="casa">Casa</option>
+                            <option value="escritorio">Escritório</option>
+                            <option value="loja">Loja</option>
+                            <option value="apartamento">Apartamento</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="localizacao">Localização:</label>
+                        <input type="text" class="form-control" id="localizacao" name="localizacao" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="categoria">Categoria:</label>
+                        <select class="form-control" id="categoria" name="categoria" required>
+                            <option value="venda">Venda</option>
+                            <option value="aluguel">Aluguel</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dimensao">Dimensão do Terreno (m²):</label>
+                        <input type="number" class="form-control" id="dimensao" name="dimensao" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numQuartos">Número de Quartos:</label>
+                        <input type="number" class="form-control" id="numQuartos" name="numQuartos" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numBanheiros">Número de Banheiros:</label>
+                        <input type="number" class="form-control" id="numBanheiros" name="numBanheiros" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preco">Preço do Imóvel:</label>
+                        <input type="number" class="form-control" id="preco" name="preco" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Adicionando o Bootstrap JavaScript e jQuery (necessários para alguns recursos do Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
